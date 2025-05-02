@@ -8,7 +8,7 @@ az vm extension set \
   --name customScript \
   --publisher Microsoft.Azure.Extensions \
   --version 2.1 \
-  --settings '{"fileUris":["https://raw.githubusercontent.com/vlhoang/microsoft-azure-for-beginner/master/section10-networking-services/configure-nginx.sh"]}' \
+  --settings '{"fileUris":["https://raw.githubusercontent.com/vlhoang/microsoft-azure-for-beginner/refs/heads/dev/linhvu/section-10-networking-services/configure-nginx.sh"]}' \
   --protected-settings '{"commandToExecute": "./configure-nginx.sh"}'    
 
 #Bước 2: Tạo 1 NSG gán cho subnet của VM (theo hướng dẫn của video lab), mở cổng 80 và truy cập vào VM theo public IP, xem kết quả
