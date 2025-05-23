@@ -1,0 +1,80 @@
+[ 
+  { 
+    "id": "1", 
+    "name": "Apple MacBook Pro", 
+    "price": 2200, 
+    "category": "Laptop", 
+    "brand": "Apple" 
+  }, 
+  { 
+    "id": "2", 
+    "name": "Dell XPS 13", 
+    "price": 1500, 
+    "category": "Laptop", 
+    "brand": "Dell" 
+  }, 
+
+  { 
+    "id": "3", 
+    "name": "Samsung Galaxy S22", 
+    "price": 999, 
+    "category": "Smartphone", 
+    "brand": "Samsung" 
+  }, 
+
+  { 
+    "id": "4", 
+    "name": "iPhone 14 Pro", 
+    "price": 1199, 
+    "category": "Smartphone", 
+    "brand": "Apple" 
+  }, 
+
+  { 
+    "id": "5", 
+    "name": "HP Envy 15", 
+    "price": 1100, 
+    "category": "Laptop", 
+    "brand": "HP" 
+  }, 
+
+  { 
+    "id": "6", 
+    "name": "Sony WH-1000XM5", 
+    "price": 400, 
+    "category": "Headphones", 
+    "brand": "Sony" 
+  }, 
+
+  { 
+    "id": "7", 
+    "name": "Bose QuietComfort 45", 
+    "price": 350, 
+    "category": "Headphones", 
+    "brand": "Bose" 
+  }, 
+
+  { 
+    "id": "8", 
+    "name": "Apple AirPods Pro", 
+    "price": 250, 
+    "category": "Headphones", 
+    "brand": "Apple" 
+  }, 
+
+  { 
+    "id": "9", 
+    "name": "Google Pixel 6", 
+    "price": 599, 
+    "category": "Smartphone", 
+    "brand": "Google" 
+  }, 
+
+  { 
+    "id": "10", 
+    "name": "Microsoft Surface Laptop 4", 
+    "price": 1300, 
+    "category": "Laptop", 
+    "brand": "Microsoft" 
+  }
+] 

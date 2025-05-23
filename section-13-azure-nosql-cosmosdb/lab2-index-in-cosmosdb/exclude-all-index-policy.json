@@ -1,0 +1,15 @@
+{
+    "indexingMode": "consistent",
+    "automatic": true,
+    "includedPaths": [
+        {
+        }
+    ],
+    "excludedPaths": [
+        {
+            "path": "/*"
+        }
+    ],
+    "fullTextIndexes": []
+}
+
