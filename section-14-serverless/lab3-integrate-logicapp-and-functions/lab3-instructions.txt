@@ -1,0 +1,24 @@
+Mục tiêu: Tạo 1 logic app workflow và tích hợp 1 function app
+Cần chuẩn bị: 
+- Logic app và function app đã tạo ở lab 1 và 2
+- Tài khoản Postman
+
+Bước 1: Vào logic app xoá workflow cũ
+Bước 2: Tạo Trigger: When a HTTP request is received, điền schema như sau:
+{
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string"
+    }
+  }
+}
+Bước 3: Tạo Azure Function Action, chọn function đã tạo, chọn các tham số:
+- Request body: Chọn Body của Trigger
+- method: POST
+- Header: Content-Type: application/json
+Bước 4: Tạo Response Action
+- Status code: 200
+- Body: Body của function app 
+Bước 5: Save Logic App
+Bước 6: Chạy thử và kiểm tra kết quả bằng cách dùng Postman
