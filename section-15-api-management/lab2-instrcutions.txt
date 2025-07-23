@@ -1,0 +1,47 @@
+Mục tiêu: Tạo các policy Rate Limiting, Caching và Transformation
+Yêu cầu: APIM và Color API được tạo ở lab 1
+
+Bước 1: Tạo cache policy giúp cache các response tại API gateway trong 15s (sử dụng https://colors-web.azurewebsites.net/ để kiểm tra kêt quả)
+Bước 2: Tạo rate limiting policy giới hạn 10 request trong 60s
+Bước 3: Tạo Transformation policy đổi màu từ blue sang red bằng cách edit thêm dòng: <find-and-replace from="blue" to="red" /> trong mục outbound
+Bước 4: Tạo Transformation policy giấu các thông tin trong response khi người dùng truy cập các product không phải là unlimited với file policy dưới đây (chỉ áp dụng cho phương thức get color by ID):
+<!--
+    - Policies are applied in the order they appear.
+    - Position <base/> inside a section to inherit policies from the outer scope.
+    - Comments within policies are not preserved.
+-->
+<!-- Add policies as children to the <inbound>, <outbound>, <backend>, and <on-error> elements -->
+<policies>
+    <!-- Throttle, authorize, validate, cache, or transform the requests -->
+    <inbound>
+        <base />
+        <set-header name="Accept-Encoding" exists-action="override">
+            <value>deflate</value>
+        </set-header>
+    </inbound>
+    <!-- Control if and how the requests are forwarded to services  -->
+    <backend>
+        <base />
+    </backend>
+    <!-- Customize the responses -->
+    <outbound>
+        <base />
+        <choose>
+            <when condition="@(context.Response.StatusCode == 200 && context.Product?.Name != "Unlimited")">
+                <set-body>@{
+                            var response = context.Response.Body.As<JObject>();
+
+                            foreach (var key in new [] {"hexcode", "data"}) {
+                                response.Property(key).Remove();
+                            }
+
+                            return response.ToString();
+                            }</set-body>
+            </when>
+        </choose>
+    </outbound>
+    <!-- Handle exceptions and customize error responses  -->
+    <on-error>
+        <base />
+    </on-error>
+</policies>
