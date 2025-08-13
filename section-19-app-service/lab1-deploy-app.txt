@@ -1,5 +1,5 @@
-Mục tiêu: Tạo 1 python app và deploy lên app service
-Yêu cầu: Python (3.12), Azure CLI cài đặt trên máy
+Mục tiêu: Kết nối app service đã tạo từ lab 1 đến cosmos db
+Yêu cầu: App service đã tạo ở bài 1
 
 Bước 1: Tạo 1 CosmosDB (hướng dẫn trong video)
 Bước 2: Clone repo https://github.com/vlhoang/python-todo-app-cosmosdb về 1 thư mục trên máy

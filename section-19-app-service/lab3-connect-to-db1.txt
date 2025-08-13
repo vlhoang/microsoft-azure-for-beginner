@@ -1,4 +1,4 @@
-Mục tiêu: Tạo 1 python app và deploy lên app service
+Mục tiêu: Tạo 1 app service và deploy ứng dụng
 Yêu cầu: Python (3.12), Azure CLI cài đặt trên máy
 
 Bước 1: Tạo 1 App Service (hướng dẫn trong video) (SCM_DO_BUILD_DURING_DEPLOYMENT = true)
