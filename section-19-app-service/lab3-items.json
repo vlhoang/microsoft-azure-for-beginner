@@ -1,0 +1,62 @@
+[
+  {
+    "id": "1",
+    "text": "The best way to get started is to quit talking and begin doing.",
+    "author": "Walt Disney",
+    "random": 0.1342
+  },
+  {
+    "id": "2",
+    "text": "Don't let yesterday take up too much of today.",
+    "author": "Will Rogers",
+    "random": 0.8471
+  },
+  {
+    "id": "3",
+    "text": "It's not whether you get knocked down, it's whether you get up.",
+    "author": "Vince Lombardi",
+    "random": 0.5296
+  },
+  {
+    "id": "4",
+    "text": "If you are working on something exciting, it will keep you motivated.",
+    "author": "Steve Jobs",
+    "random": 0.6783
+  },
+  {
+    "id": "5",
+    "text": "Success is not in what you have, but who you are.",
+    "author": "Bo Bennett",
+    "random": 0.3925
+  },
+  {
+    "id": "6",
+    "text": "Hard work beats talent when talent doesn't work hard.",
+    "author": "Tim Notke",
+    "random": 0.7548
+  },
+  {
+    "id": "7",
+    "text": "Don't watch the clock; do what it does. Keep going.",
+    "author": "Sam Levenson",
+    "random": 0.2107
+  },
+  {
+    "id": "8",
+    "text": "Great things never come from comfort zones.",
+    "author": "Anonymous",
+    "random": 0.9821
+  },
+  {
+    "id": "9",
+    "text": "Push yourself, because no one else is going to do it for you.",
+    "author": "Anonymous",
+    "random": 0.6134
+  },
+  {
+    "id": "10",
+    "text": "Dream bigger. Do bigger.",
+    "author": "Anonymous",
+    "random": 0.4562
+  }
+]

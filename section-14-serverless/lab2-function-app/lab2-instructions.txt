@@ -1,0 +1,17 @@
+Mục tiêu: Tạo 1 function app, trả về kết quả "Hello" khi người dùng gửi request
+Cần chuẩn bị: 
+- Visual Studio Code
+- Các extension của VS Code: Python, Azure Functions, Azurite v3 (giả lập local storage)
+- Python 3.12 được cài đặt trên máy local (https://www.python.org/downloads/release/python-31210/)
+
+Bước 1: Tạo 1 folder chứa code
+Bước 2: Trong VS Code, ấn Ctrl + Shift + P để chạy command: Azure Functions: Install or Update Core Tools, để update tool cho Azure Functions, hoặc sử dụng link https://learn.microsoft.com/en-us/azure/azure-functions/functions-run-local#install-the-azure-functions-core-tools, để cài thủ công (nếu không có npm)
+Bước 3: Chạy lệnh Azure Functions: Create New Project... để tạo project, sau đó chọn các tham số như trong video
+Bước 4: Trong file local.settings.json, chỉnh tham số: "AzureWebJobsStorage": "UseDevelopmentStorage=true", để sử dụng local storage
+Bước 5: Chạy lệnh Azurite: Start để start dịch vụ Azurite
+Bước 6: Chạy thử function trên VS Code và verify
+Bước 7: Sign in vào Azure trên VS Code
+Bước 8: Lên Azure Portal và tạo 1 Function App theo cấu hình trong video
+Bước 9: Qay lại VS Code, trong file local.settings.json, chỉnh tham số: "AzureWebJobsStorage": thành connection string của storage account
+Bước 10: Chạy lệnh Azure Functions: Deploy to Function App để deploy app lên Azure function
+Bước 11: Chạy lệnh Azure Functions:Execute Function Now... để chạy thử function, điền request body: { "name": "Azure" } và verify kết quả

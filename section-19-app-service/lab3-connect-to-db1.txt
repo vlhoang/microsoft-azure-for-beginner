@@ -1,0 +1,22 @@
+Mục tiêu: Tạo 1 app service và deploy ứng dụng
+Yêu cầu: Python (3.12), Azure CLI cài đặt trên máy
+
+Bước 1: Tạo 1 App Service (hướng dẫn trong video) (SCM_DO_BUILD_DURING_DEPLOYMENT = true)
+Bước 2: Clone repo https://github.com/vlhoang/python-todo-app về 1 thư mục trên máy
+Bước 3: (Optional) Chạy thử ứng dụng trên local bằng venv
+# Go to your project folder
+cd flask-todo-app
+
+# Create virtual environment
+python -m venv venv
+
+# Install package
+pip install -r requirements.txt 
+
+# Activate it
+source venv/bin/activate
+venv\Scripts\activate
+Bước 4: Tạo 1 file zip chứa source code
+Bước 5: Chạy lệnh sau để deploy lên App Service
+az webapp deploy --name $APP_SERVICE_NAME --resource-group $RESOURCE_GROUP_NAME --src-path <zip-file-path>
+Thay thế các biến với tên app service, resource group và file zip của bạn

@@ -1,0 +1,26 @@
+{
+    "indexingMode": "consistent",
+    "automatic": true,
+    "includedPaths": [
+        {
+            "path": "/*"
+        }
+    ],
+    "excludedPaths": [
+        {
+            "path": "/\"_etag\"/?"
+        }
+    ],
+    "fullTextIndexes": [],
+    "compositeIndexes": [ 
+        [ 
+            {"path": "/category", "order": "ascending"}, 
+            {"path": "/price", "order": "descending"} 
+        ],
+        [ 
+            {"path": "/category", "order": "ascending"}, 
+            {"path": "/price", "order": "ascending"} 
+        ] 
+    ] 
+}
+

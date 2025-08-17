@@ -1,0 +1,12 @@
+Mục tiêu: Tạo 1 deployment slot và deploy
+Yêu cầu: Python (3.12), Azure CLI cài đặt trên máy
+
+Bước 1: Tạo 1 deployment slot
+Bước 2: Deploy code đã chỉnh sửa đến deployment slot
+az webapp deploy \
+    --name $APP_SERVICE_NAME \
+    --resource-group $RESOURCE_GROUP_NAME \
+    --src-path <zip-file-path>
+    --slot <slot-name>
+Bước 3: Swap với deployment slot hiện tại
+Bước 4: Cấu hình autoscale theo schedule

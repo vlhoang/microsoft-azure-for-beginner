@@ -1,0 +1,35 @@
+# Xem full log trong 30 phút gần nhất
+StorageBlobLogs
+| where TimeGenerated > ago(30m)
+
+
+# Xem các hành động “Write” lên blob
+StorageBlobLogs
+| where TimeGenerated > ago(30m)
+| where Category == "StorageWrite"
+| project TimeGenerated, OperationName, ObjectKey, CallerIpAddress, StatusCode, Uri
+
+# Xem hoạt động từ container cụ thể
+StorageBlobLogs
+| where TimeGenerated > ago(1d)
+| where ObjectKey contains "testcont"
+| project TimeGenerated, OperationName, ObjectKey, CallerIpAddress, Uri 
+
+# Lượt truy cập blob theo thời gian sd timechart
+StorageBlobLogs
+| where TimeGenerated > ago(1d)
+| where Category == "StorageRead"
+| summarize ReadRequestCount = count() by bin(TimeGenerated, 1h)
+| render timechart
+
+# Thống kê số lượng thao tác theo OperationName sd barchart
+StorageBlobLogs
+| where TimeGenerated > ago(24h)
+| summarize Count = count() by OperationName
+| render barchart
+
+# Thống kê số lượng thao tác theo category sd piechart
+StorageBlobLogs
+| where TimeGenerated > ago(24h)
+| summarize Count = count() by Category
+| render piechart

@@ -1,0 +1,15 @@
+Mục tiêu: Tạo 1 workflow để start 1 VM bất kì, sau đó gửi mail thông báo cho người dùng
+Cần chuẩn bị: 
+- 1 VM 
+- 2 địa chỉ mail (gmail hoặc outlook)
+
+Bước 1: Tạo 1 logic app theo hướng dẫn trong video
+Bước 2: Thêm trigger Recurence
+Bước 3: Thêm HTTP Action
+- URL: https://management.azure.com/subscriptions/<subsription-id>/resourceGroups/<resrouce-group-name>/providers/Microsoft.Compute/virtualMachines/<vm-name>/start?api-version=2023-03-01
+- Method: POST
+- Headers: Content-Type: application/json
+- Authentication Type: System-assigned Managed Identity
+Bước 4: Gán role cho Managed Identity
+Bước 5: Thêm Action gửi mail (Gmail)
+Bước 6: Chạy thử function

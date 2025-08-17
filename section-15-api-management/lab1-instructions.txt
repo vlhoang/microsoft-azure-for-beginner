@@ -1,0 +1,9 @@
+Mục tiêu: Tạo 1 api management và import 1 api, sau đó tạo user để truy cập vào api
+
+Bước 1: Tạo 1 service API Management trên Azure Portal
+Bước 2: Truy cập vào developer portal
+Bước 3: Enable CORS policy để guest có thể truy cập vào từ domain khác
+Bước 4: Import API tại https://colors-api.azurewebsites.net/swagger/v1/swagger.json sử dụng OPEN API
+Bước 5: Thử test call đến API tại Azure Portal
+Bước 6: Tạo 1 user và sử dụng subsciption key để call API từ Developer portal
+Bước 7: Vào trang web https://colors-web.azurewebsites.net/ để kiểm tra sự khác biệt giữa các product
