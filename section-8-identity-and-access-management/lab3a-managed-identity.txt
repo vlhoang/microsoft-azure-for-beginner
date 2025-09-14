@@ -1,0 +1,14 @@
+Yêu cầu: Sử dụng Managed Identity của VM để truy cập vào key vault để lấy secret
+
+1. Tạo VM (có thể lấy của lab trước)
+2. Tạo key vault và secret
+3. Gán Managed Identity cho key vault
+4. Gán role cho Managed Identity để truy cập key vault
+5. Đăng nhập vào VM chạy lệnh sau:
+- Lấy token của key vault: TOKEN=$(curl -s -H "Metadata:true" \
+  "http://169.254.169.254/metadata/identity/oauth2/token?api-version=2018-02-01&resource=https://vault.azure.net" \
+  | jq -r '.access_token')
+- Lấy giá trị của secret:
+curl -s -H "Authorization: Bearer $TOKEN" \
+  "https://<tên-key-vault>.vault.azure.net/secrets/<tên-secret>?api-version=7.3"
+Thay các giá trị tên keyvault và secret tương ứng
